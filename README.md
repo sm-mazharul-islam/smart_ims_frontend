@@ -1,7 +1,6 @@
 
 ## Here is the Image
-<img src="/images/smartImsPic.png" alt="Description of the image">
-
+![Smart IMS Dashboard](./public/Images/smartImsPic.png)
 
 # 📦 Smart Inventory Management System (IMS)
 
