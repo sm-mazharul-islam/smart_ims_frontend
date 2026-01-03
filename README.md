@@ -1,70 +1,95 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Here is the Image
+<img src="/images/smartImsPic.png" alt="Description of the image">
 
-## Available Scripts
 
-In the project directory, you can run:
+# 📦 Smart Inventory Management System (IMS)
 
-### `npm start`
+A professional, full-stack Inventory Management System designed to streamline stock tracking, sales processing, and restocking alerts. This application features a robust **Spring Boot** backend and a high-performance, responsive **React** frontend.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Key Features
 
-### `npm test`
+* **Live Dashboard Summary:** Instantly view Total Product count, Total Physical Stock, and Low Stock Alerts at a glance.
+* **Inventory CRUD Operations:** Seamlessly Create, Read, Update, and Delete inventory items.
+* **Smart Sales Management:** * **Buy/Sale Modal:** Process sales through an interactive popup that automatically updates database quantities.
+    * **Edit Functionality:** Modify product names, prices, and stock levels with a smooth UI transition.
+* **Automated Stock Alerts:** Intelligent flagging of items with stock levels below 5 units.
+* **Fully Responsive:** Optimized with Tailwind CSS for high-quality display on Mobile, Tablet, and Desktop.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Backend (Core Logic)
+* **Java 17**
+* **Spring Boot 3.4.1** (Spring Web, Spring Data MongoDB)
+* **Database:** MongoDB Atlas (Cloud-based NoSQL)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Frontend (User Interface)
+* **React.js**
+* **Styling:** Tailwind CSS (via CDN)
+* **Icons:** Lucide-React
+* **API Client:** Axios (for seamless Backend communication)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🏗️ Architecture & OOP Principles
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This project is built following strict **Object-Oriented Programming (OOP)** standards:
+* **Encapsulation:** Model classes protect data integrity using private fields and public Getters/Setters.
+* **Inheritance:** Custom repositories extend `MongoRepository` to inherit advanced database functions.
+* **Abstraction:** A 3-tier architecture (Controller -> Service -> Repository) hides internal logic complexity.
+* **Dependency Injection:** Spring’s `@Autowired` manages component lifecycles and decouples business logic.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## ⚙️ Setup & Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 1. Prerequisites
+* JDK 17 or higher
+* Node.js (LTS version)
+* MongoDB Atlas Account
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 2. Backend Setup
+1.  Navigate to the backend directory.
+2.  Update `src/main/resources/application.properties` with your MongoDB connection string.
+3.  Run the application:
+    ```bash
+    ./mvnw spring-boot:run
+    ```
 
-### Code Splitting
+### 3. Frontend Setup
+1.  Navigate to the `ims-frontend` directory.
+2.  Install dependencies:
+    ```bash
+    npm install axios lucide-react
+    ```
+3.  Start the development server:
+    ```bash
+    npm start
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 📡 API Endpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| **GET** | `/api/products` | Retrieve all inventory items |
+| **POST** | `/api/products` | Create a new product entry |
+| **PUT** | `/api/products/{id}` | Update existing product details |
+| **PUT** | `/api/products/{id}/sell` | Decrease stock based on sale quantity |
+| **GET** | `/api/products/low-stock` | Retrieve items with stock < 5 |
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🤝 Contribution
+Feel free to fork this project and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
